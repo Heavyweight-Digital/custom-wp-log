@@ -1,6 +1,6 @@
 <?php
 /*  
- * Plugin Name:       Custom Log  
+ * Plugin Name:       Custom WP Log  
  * Plugin URI:        https://heavyweightdigital.co.za  
  * Description:       A custom plugin for managing and logging messages with enhanced functionality.  
  * Version:           1.0
@@ -24,8 +24,8 @@ define('CUSTOM_LOG_ENABLED', true);
 add_action('admin_menu', 'custom_log_file_menu');
 function custom_log_file_menu() {
     add_menu_page(
-        'Custom Log File',
-        'Custom Log File',
+        'Custom WP Log File',
+        'Custom WP Log File',
         'manage_options',
         'custom-log-file',
         'custom_log_file_page',
@@ -102,7 +102,7 @@ function custom_log_file_page() {
     $log_level = get_option('custom_log_level', 'all');
 
     echo '<div class="wrap">';
-    echo '<h1>Custom Log File</h1>';
+    echo '<h1>Custom WP Log File</h1>';
     echo '<form method="post">';
     echo '<table class="form-table">';
     echo '<tr><th scope="row">Set Log File Name:</th>';
